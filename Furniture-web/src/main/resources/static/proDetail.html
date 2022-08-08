@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+    <link href="css/public.css" rel="stylesheet" type="text/css"/>
+    <link href="css/proList.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!------------------------------head------------------------------>
+<!-----------------address------------------------------->
+<div class="address">
+    <div class="wrapper clearfix">
+        <a href="index.html">首页</a>
+        <span>/</span>
+        <a class="on" href="#" id="productName">【最家】非洲菊仿真花干花</a>
+    </div>
+</div>
+<!-----------------------Detail------------------------------>
+<div class="detCon">
+    <div class="proDet wrapper">
+        <div class="proCon clearfix">
+            <div class="proImg fl">
+                <img class="det" id="mainImg" src="img/temp/proDet.jpg"/>
+                <div class="smallImg clearfix">
+                    <img id="viewImg" src="img/temp/proDet01.jpg">
+                </div>
+            </div>
+            <div class="fr intro">
+                <div class="title">
+                    <h4 id="name">【最家】非洲菊仿真花干花</h4>
+                    <span>
+								￥
+								<span id="price">59.90</span>
+							</span>
+                </div>
+                <div class="proIntro" id="prompt">
+                    <p>颜色分类</p>
+                    <div class="smallImg clearfix categ" id="smallImg">
+
+                    </div>
+                    <p>数量&nbsp;&nbsp;库存<span id="inventory">2096</span>件</p>
+                    <div class="num clearfix">
+                        <img class="fl sub" src="img/temp/sub.jpg">
+                        <span class="fl" contentEditable="true" id="number">1</span>
+                        <img class="fl add" src="img/temp/add.jpg">
+                    </div>
+                    <div id="promptInfo" style="margin-top: 25px">
+                        <p style="color: red">请选择家具属性!!!</p>
+                    </div>
+                </div>
+                <div class="btns clearfix">
+                    <a><p class="btn btn-danger" id="buyNow">立即购买</p></a>
+                    <a><p class="btn btn-info" id="addCart">加入购物车</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="introMsg wrapper clearfix">
+    <div class="msgL fl">
+        <div class="msgTit clearfix">
+            <p id="allComment" style="cursor: pointer">所有评价</p>
+        </div>
+        <div class="msgAll">
+            <div class="eva" id="eva">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="gotop">
+    <a href="cart.html">
+        <dl class="goCart">
+            <dt><img src="img/gt1.png"/></dt>
+            <dd>去购<br/>物车</dd>
+            <span>1</span>
+        </dl>
+    </a>
+    <a href="mygxin.html">
+        <dl>
+            <dt><img src="img/gt3.png"/></dt>
+            <dd>个人<br/>中心</dd>
+        </dl>
+    </a>
+    <a class="toptop" href="#" style="display: none;">
+        <dl>
+            <dt><img src="img/gt4.png"/></dt>
+            <dd>返回<br/>顶部</dd>
+        </dl>
+    </a>
+    <p>400-800-8200</p>
+</div>
+<div class="msk"></div>
+<!--footer-->
+<script charset="utf-8" src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/public.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/nav.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/pro.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/cart.js" type="text/javascript"></script>
+<script charset="utf-8" src="f_js/detail.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(".bottom").slide({
+        titCell: ".hd ul",
+        mainCell: ".bd .likeList",
+        autoPage: true,
+        autoPlay: false,
+        effect: "leftLoop",
+        autoPlay: true,
+        vis: 1
+    });
+</script>
+
+</body>
+</html>

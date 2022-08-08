@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <style>
+        body {
+            background-image: url("img/backgroudImage.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        #choose:hover {
+            cursor: pointer;
+        }
+
+        #chooseType {
+            position: fixed;
+            right: 100px;
+            top: 50px;
+        }
+
+        .addFurnitureType {
+            position: fixed;
+            left: 180px;
+            top: 110px;
+        }
+
+        .addFurniture {
+            position: fixed;
+            left: 180px;
+            top: -30px;
+        }
+
+        #choose {
+            width: 200px;
+            text-align: center;
+            border: 3px skyblue solid;
+        }
+
+        #placeChoose {
+            color: aquamarine;
+        }
+
+        #selectFurnitureDetails {
+            text-align: center;
+            border: 3px solid aquamarine;
+            width: 100px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+<div id="chooseType">
+    <h2>
+        <span id="placeChoose">请选择:</span>
+        <select id="choose">
+            <option value="类型">添加类型</option>
+            <option value="家具">添加家具</option>
+            <option value="查看家具">查看家具</option>
+        </select>
+    </h2>
+</div>
+<div class="addFurnitureType">
+    <div class="row">
+        <div class="col-md-8" style="margin: 120px 365px;">
+            <form action="#" class="form-horizontal" method="post">
+                <fieldset>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="furnitureTypeName">请输入家具类型的名称</label>
+                        <div class="col-md-4">
+                            <input class="form-control" id="furnitureTypeName" type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-3">
+                            <input class="btn btn-info" id="addFurnitureSubmit" style="margin-left: 40px;margin-right: 25px;"
+                                   type="button" value="提交"/>
+                            <input class="btn btn-warning" type="reset" value="重置"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="addFurniture">
+    <div class="row">
+        <div class="col-md-8" style="margin: 120px 365px;">
+            <form action="/householdFurniture/backstage/addFurniture" class="form-horizontal" enctype="multipart/form-data"
+                  id="uploadFurnitureForm" method="post">
+                <fieldset>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="types">类型</label>
+                        <div class="col-md-4">
+                            <select id="types" name="selectType" style="border: #90D7EC solid 3px"></select>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="furnitureName">名称</label>
+                        <div class="col-md-4">
+                            <input class="form-control" id="furnitureName" name="furnitureName" type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="description">描述</label>
+                        <div class="col-md-4">
+                            <input class="form-control" id="description" name="description" type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="price">价格</label>
+                        <div class="col-md-4">
+                            <input class="form-control" id="price" name="price" type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="keyWordSearch">关键字搜索</label>
+                        <div class="col-md-4">
+                            <input class="form-control" id="keyWordSearch" name="keyWordSearch" type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="details">详情</label>
+                        <div class="col-md-4">
+                            <select id="selectFurnitureDetails" name="selectFurnitureDetails">
+                                <option value="颜色">颜色</option>
+                                <option value="尺寸">尺寸</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2" style="margin-left: -110px;">
+                            <input class="form-control" id="details" name="details" type="text"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="file">主图</label>
+                        <p class="col-sm-5">
+                            <label class="btn btn-info" for="masterFile">请选择家具上传的主图</label>
+                            <input id="masterFile" name="furnitureBigImg" style="display:none" type="file">
+                        </p>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="file">小图</label>
+                        <p class="col-sm-5">
+                            <label class="btn btn-info" for="file">请选择家具上传的小图</label>
+                            <input id="file" multiple name="furnitureSmallImg" style="display:none" type="file">
+                        </p>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label class="col-md-3 control-label" for="inventory">库存</label>
+                        <div class="col-md-4">
+                            <input class="form-control" id="inventory" name="inventory" type="number"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-3">
+                            <input class="btn btn-info" id="sub" style="margin-left: 40px;margin-right: 25px;"
+                                   type="button" value="提交"/>
+                            <input class="btn btn-warning" type="reset" value="重置"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/uploadFurniture.js"></script>
+<script src="f_js/addFurnitureType.js"></script>
+<script src="f_js/addFurniture.js"></script>
+</html>

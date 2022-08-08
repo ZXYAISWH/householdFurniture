@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+# APPID 登录支付宝会生成
+app:
+  appId: 2021000121638705
+# 应用私钥 生成密钥器生成
+  privateKey: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCmMSe0ULBpwsoqlUkH1i0sBAKbSMd45j7QIQU6a+zp5hiOLQ5oTujEonDEM/8OIwqjrg+GA1CBSske8oBepTq8UCFAxsCqag60gQCbiZ5dtChk+gRVGNAxwyWxoA8WtupeiX4Nkr2fGvuG+qBK7bwywXa/l6cXzucdAkXtaj/jANXfy6tmey+KTwX3qC4tJ03S+UBCKUJ8bbhXpfaAODmYSFUmn1xpOSFRzihFJFhEN1FBtPEN3efIjFCe3gLHW4xb7namHaRXgs4MMc/lnRsG3TGn2aziDNf9CyYjgDcUtlMnmmTlwiq2Rbh/QIMzDeYRirK2Btbl7pofnH8jJU4bAgMBAAECggEAMsxTlooTYkBoCxwWdo7Av/N52H0me43lJTjyoCjdAaGTX+HlxXxZKcF9NnuuOmP7nIxXsl7Q/LQfRZZaJpPaoDTd9S7LNUu1sva7eM9X2Mx4jGTfbiNnf85mdyS1d/vxJ3RfU0bHLxrQRzHUTRLds6Xu5iE0sdJMUlGfjjIr1Pas2UaK14eBFKxyg2cNlHpa4hz8EiSKMMPCak6jyAU+D8Ocs//YQGG2X6VEGnb5CyT7Yq+guEjr77n4tCJ0kaLu72cqzvCsOkgT6Slmb1dIx6kUrSsiZelDhfwfiPeGkVki08dWMfSj1cd0RtxkZLS1noD6T7S9BzZ4q3FvuqhSAQKBgQDwNJkET5gXMjycHaLfPNsQQHQJWyEaQb0LQEzaB2LVtD8tHOP0wT22aj4t1AlihmdRIo2AsVYdubM0z1jd5SjJ2uvdb2/kOUvXhMexISfmGEqmJwsnZM50KUQDcvyqN3E76tJ8kQq9xMKF/GfAvfyFTxa5tIbCvGYFvofnqL67ZwKBgQCxHq6Ct8b453BhD6zCUYaGADjDy5/sQDyzC63966HJCnSMvvBpSgBxbilI9nwKKWP0kr60jeO/hPU32Pzam48smHJQjDTDqJZ5lIkAMHLakYN19CG/V3i/pSme8aaFY9EZ71w6NK4meLqvdy7nP5WKOfw+UDwH8hOfZXMer0GbLQKBgQDLiQYPrRIGtb692i7kUkCdaL/qHZnTEdkJ65YzOQb6Zh0SMOTHw+Zy51uAoabCIXjyOwEEB0AdN/ktynRWsZL6V9J8c6ywCgzFtfEvmhSg1/yJBZRh8P0vWLgU5B5MbWY5iySIAK7FVjAuME4J9/I9U2LCQMHfyJv6ShQGq+nSCQKBgQCostV6cbpVFnMmL3zXtDjR5uIqMwcGSYTG8EfvgwAccRXjfHWVg0N6xncSJJquPxASQbbcWAzlPKknYUgsm1+6FRVEfNZAyZFRCdWXVY3/efthXH7MNW8v8gr7daSqhhECh8YrNkPtJq6BM5576UbwWhxT6a3Tz5E7D7CfOEPfnQKBgGBdVw3OqxEu7uTmKRNTszUCkp33fpTh1EBg0L4Tdhv6TN9SRE1E1G0Pe7Lr1u0RmGPZgX80xq682L2RHCNADqLHEjt3YxARocklJX8x32PQT9Kagauo0/HCHmFAXug+I/4udhfV6y3fE2pV9r7XsrcTeFBDaRRZJkC+0DRRmzhr
+#支付宝公钥 RSA2密钥(推荐) 配置好并启动会生成
+  publicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuxS9rN+nhSyCNrIGgehR+PHGNVnjRuhhkxw0dtUCnbIYO5zwGKR1dplAtjL/hIMuB6vHZwqEmi6m/rsXZcQmQ/IsA2hh2cI+GQ1n1vGneaFTMatXbK6qFLC25H/ckNv9/xQFi41NDydkT44jd4S1TU4UhqjJCvzJ/GIcdTA8l5/sMkwC7YWd4Mg8jkIH6tmBNootQg3lmokXT7udJ4vJ1BsedxJMUTUOZfUqRtLxUWWHGQ3KdZ6wG6CvRxVFdDnrKykkW7CVD6NC14v7r5VQbsb7Ni3d2lBchJhfiZfirMr5p/XNNGW2J2bvig4CocZmxCthQkjM7FOv8O8OgXmHzQIDAQAB
+  notifyUrl: http://localhost:8080/myorderq.html
+  returnUrl: http://localhost:8080/myorderq.html
+  signType: RSA2
+  charset: utf-8
+  gatewayUrl: https://openapi.alipaydev.com/gateway.do
+
+spring:
+  messages:
+    basename: i18n/messages
+  servlet:
+    multipart:
+      max-file-size: 10GB
+      max-request-size: 100GB
+  redis:
+    database: 0
+    lettuce:
+      pool:
+        max-idle: 8
+        max-wait: -1
+        min-idle: 8
+    host: 172.16.0.85
+  datasource:
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/householdfurniture?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    type: com.alibaba.druid.pool.DruidDataSource
+logging:
+  file:
+    name: furniture.log
+
+

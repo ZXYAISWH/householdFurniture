@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8"/>
+    <title>order</title>
+    <link href="css/public.css" rel="stylesheet" type="text/css"/>
+    <link href="css/proList.css" rel="stylesheet" type="text/css"/>
+    <link href="css/mygxin.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!----------------------------------------order------------------>
+<div class="order cart mt">
+    <!-----------------orderCon------------------->
+    <div class="orderCon wrapper clearfix">
+        <div class="orderL fl">
+            <!--------addres---------------->
+            <div class="addres clearfix" id="userAddressChoose">
+
+            </div>
+            <h3>支付方式</h3>
+            <!--------way---------------->
+            <div class="way clearfix">
+                <img class="payType" is="false" pay="支付宝支付" src="img/temp/way01.jpg">
+                <img class="payType" is="false" pay="微信支付" src="img/temp/way02.jpg">
+            </div>
+        </div>
+        <div class="orderR fr" style="margin-top: 20px">
+            <div class="msg" id="orderInfo">
+            </div>
+            <!--------tips---------------->
+            <div class="tips">
+                <p><span class="fl">商品金额：￥</span><span class="fr" id="furniturePrice">139.80</span></p>
+                <p><span class="fl">运费：</span><span class="fr">免运费</span></p>
+            </div>
+            <!--------tips count---------------->
+            <div class="count tips">
+                <p><span class="fl">合计：￥</span><span class="fr" id="sumPrice">139.80</span></p>
+            </div>
+            <!--<input type="button" name="" value="去支付"> -->
+            <p class="pay" id="pay">去支付</p>
+        </div>
+    </div>
+</div>
+<!--返回顶部-->
+<div class="gotop">
+    <a href="cart.html">
+        <dl>
+            <dt><img src="img/gt1.png"/></dt>
+            <dd>去购<br/>物车</dd>
+        </dl>
+    </a>
+    <a href="mygxin.html">
+        <dl>
+            <dt><img src="img/gt3.png"/></dt>
+            <dd>个人<br/>中心</dd>
+        </dl>
+    </a>
+    <a class="toptop" href="#" style="display: none;">
+        <dl>
+            <dt><img src="img/gt4.png"/></dt>
+            <dd>返回<br/>顶部</dd>
+        </dl>
+    </a>
+    <p>400-800-8200</p>
+</div>
+<!--footer-->
+<script charset="utf-8" src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/public.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/pro.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/user.js" type="text/javascript"></script>
+<script charset="utf-8" src="f_js/order.js" type="text/javascript"></script>
+</body>
+</html>

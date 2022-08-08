@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8"/>
+    <title>forget</title>
+    <link href="css/public.css" rel="stylesheet" type="text/css"/>
+    <link href="css/proList.css" rel="stylesheet" type="text/css"/>
+    <link href="css/forget.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!----------------------------------------order------------------>
+<div class="order cart">
+    <!-----------------logo------------------->
+    <div class="logo">
+        <h1 class="wrapper clearfix">
+            <a href="index.html"><img class="fl" src="img/temp/logo.png"></a>
+        </h1>
+    </div>
+    <div class="forCon">
+        <p>安全设置-找回密码</p>
+        <ul>
+            <li class="on"><span>01/</span>输入登录名</li>
+            <li class="code"><span>02/</span>验证信息</li>
+            <li><span>03/</span>重置密码</li>
+        </ul>
+        <div class="formCon">
+            <!--步骤1-->
+            <form action="#" class="one" method="post">
+                <p id="accountResult">此账号未注册,请先注册</p>
+                <p id="errorCode">验证码错误</p>
+                <input id="account" placeholder="手机号/邮箱" type="text" value=""><label>请输入手机号/邮箱</label><br/>
+                <input id="code" placeholder="验证码" type="text" value=""><label>请输入验证码</label><br/>
+                <img id="code-img" src="img/code/one.png"><br>
+                <input id="next" type="button" value="下一步">
+            </form>
+            <!--步骤2-->
+            <form action="#" class="two" method="post">
+                <p id="phoneText">手机号码:<span id="phone">17673024351</span></p>
+                <p id="emailText">电子邮箱:<span id="email">114081*****qq.com</span></p>
+                <p class="tip" id="promptEmail">验证邮件已发往你的电子邮箱，请点击邮件中的链接完成验证</p>
+                <p class="tip" id="promptPhone">验证码以发送您的手机号码</p>
+                <input id="accountCode" type="text"><br/>
+                <input class="next1" id="next1" type="button" value="邮箱验证">
+            </form>
+            <!--步骤3-->
+            <form action="#" class="three" method="post">
+                <p id="passResult">密码不一致</p>
+                <label>新密码:</label><input class="input-sm" id="password" style="border: 1px solid black" type="password"
+                                          value=""><br/>
+                <label>确认密码:</label><input class="input-sm" id="surePassword" style="border: 1px solid black" type="password"
+                                           value=""><br/>
+                <input id="complete" type="button" value="完成">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script charset="utf-8" src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/public.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/pro.js" type="text/javascript"></script>
+</body>
+<script src="f_js/forget.js"></script>
+</html>
